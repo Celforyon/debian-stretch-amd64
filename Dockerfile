@@ -8,3 +8,6 @@ RUN  apt update \
 	&& apt install -y --no-install-recommends --no-install-suggests \
 		make cmake git catch gcc g++ \
 	&& rm -rf /var/lib/apt/lists/*
+
+RUN useradd -ms /bin/bash user
+USER user
